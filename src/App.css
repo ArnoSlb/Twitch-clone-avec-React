@@ -21,6 +21,8 @@ HEADER
   width: 100%;
   z-index: 1000;
   font-size: 14px;
+  border-bottom: 2px solid #0e0e10;
+  font-weight: bold;
 }
 
 .listMenu {
@@ -32,7 +34,7 @@ HEADER
 
 .liensNav{
   list-style-type: none;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .liensNav:nth-child(4){
@@ -47,7 +49,7 @@ HEADER
 
 .logo{
   margin-top: 5px;
-  height: 40px;
+  height: 35px;
 }
 
 .formSubmit {
@@ -97,4 +99,31 @@ HEADER
     left: auto;
     transform: none;
   }
+}
+
+/* 
+/////////
+SIDEBAR
+///////// 
+*/
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  width: 239px;
+  background-color: #1f1f23;
+  height: 100vh;
+}
+
+.titleSidebar {
+  padding: 20px 0 10px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.listStream {
+  padding: 0 0 0 10px;
 }

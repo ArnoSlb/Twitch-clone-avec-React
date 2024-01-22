@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div>
             <nav className="headerTop">
-                <ul className="listeMenu">
+                <ul className="listMenu">
                     <li className="liensNav">
                         <img src={logo} alt="logo twitch" className="logo" />
                     </li>
@@ -20,15 +20,15 @@ const Header = () => {
                     </li>
                     <li className="liensNav">
                         <form action="" className="formSubmit">
-                            <input type="text" className="inputSearch" />
+                            <input type="text" className="inputSearch" placeholder="Rechercher"/>
                             <button type="submit">
-                                <img src={search} alt="icone loupe" className="logoLoupe" />
+                                <img src={search} alt="icone loupe" className="logoSearch" />
                             </button>
                         </form>
                     </li>
                 </ul>
             </nav>
-            <div className="menuRestBtn">
+            <div className="menuResBtn">
                 <img src={menuIco} alt="icone menu responsive" className="menuIco" />
             </div>
         </div>

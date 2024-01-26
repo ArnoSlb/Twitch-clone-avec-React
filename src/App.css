@@ -68,6 +68,12 @@ HEADER
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 0 10px;
+  color: whitesmoke;
+}
+
+.inputSearch:focus {
+  border: 1px solid #9146ff;
+  outline: none;
 }
 
 .liensNav button {
@@ -128,3 +134,133 @@ SIDEBAR
   padding: 0 0 0 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* 
+/////////
+GAMES
+///////// 
+*/
+
+.titleGames {
+  padding-top: 90px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 280px;
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+.categoriesGames{
+  text-align: left;
+  margin-left: 280px;
+  color: #9147ff;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 1px solid  #9147ff;
+  width: fit-content;
+  font-size: 20px;
+}
+
+.categoriesGames:hover{
+  color: #9146ff;;
+}
+
+.flexAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 239px;
+  padding-top: 50px;
+}
+
+.cardGames {
+  height: 360px;
+  width: 200px;
+  margin: 0 30px 30px 0;
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(105, 16, 146, 0.75);
+}
+
+.cardGames:hover {
+  cursor: pointer;
+}
+
+.imgCard{
+  transition: all 0.4s ;
+  border-top-right-radius: 10px;
+  margin-top: 10px;
+}
+
+.imgCard:hover {
+  transform: translate(5px, -5px);
+  border-left: 5px solid #9146ff;
+  border-bottom: 5px solid #9146ff ;
+}
+
+.cardBodyGames {
+  height: 94px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.titleCardGames {
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.btnCard {
+  height: 30px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#9147ff, #571dae);
+  font-size: 12px;
+  line-height: 1.125;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: 700;
+}
+
+.btnCard:hover {
+  text-decoration: none;
+  background: linear-gradient(#9147ff, #571dae);
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 1200px) {
+  .titleGames, .categoriesGames {
+    margin-left: 15px;
+  }
+
+  .flexAccueil {
+    padding-left: 15px;
+  }
+
+  .cardGames {
+    width: 150px;
+    height: 280px;
+  }
+
+  .imgCard {
+    width: 80%;
+  }
+
+}

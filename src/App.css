@@ -54,9 +54,13 @@ HEADER
 }
 
 .lien:hover {
-  color: #9147ff;
+  color: whitesmoke;
   cursor: pointer;
   text-decoration: none;
+}
+
+.purpleHover:hover{
+  color: #9147ff;
 }
 
 .logo{

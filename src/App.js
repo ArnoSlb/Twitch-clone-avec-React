@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route exact path='/' Component={Games}/>
           <Route exact path='/top-streams' Component={TopStreams}/>
-          <Route exact path='/live' Component={Live}/>
+          <Route exact path='/live/:slug' Component={Live}/>
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import api from "../../api";
+import { Link } from "react-router-dom";
 
 const TopStreams = () => {
 
@@ -110,17 +111,21 @@ const TopStreams = () => {
             <div className="flexAccueil">
                 {channels.map((channel, index) => (
                      <div key={index} className="cardStream">
-                        <img src={channel.thumbnail_url} className="imgStreamCard" alt="jeu" />
-                        <p className="live">live</p>
-                        <p className="liveViewers">{channel.view}</p>
-                        <div className="cardBodyStream">
-                            <img src={channel.truePic} alt="logo user" className="profilePicRonde" />
-                            <div className="carBodyStreamData">
-                                <h5 className="titleCardsStream">{channel.title}</h5>
-                                <p className="gameNameSidebar">{channel.user_name}</p>
-                                <div className="gameNameSidebar">{channel.gameName}</div>
+                        <Link className="lien" to={{
+                            pathname: `/live/${channel.login}`
+                        }}>
+                            <img src={channel.thumbnail_url} className="imgStreamCard" alt="jeu" />
+                            <p className="live">live</p>
+                            <p className="liveViewers">{channel.view}</p>
+                            <div className="cardBodyStream">
+                                <img src={channel.truePic} alt="logo user" className="profilePicRonde" />
+                                <div className="carBodyStreamData">
+                                    <h5 className="titleCardsStream">{channel.title}</h5>
+                                    <p className="gameNameSidebar">{channel.user_name}</p>
+                                    <div className="gameNameSidebar">{channel.gameName}</div>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 ))}
             </div>

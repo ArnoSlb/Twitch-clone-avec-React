@@ -15,13 +15,13 @@ const Header = () => {
                             <img src={logo} alt="logo twitch" className="logo" />
                         </Link>
                     </li>
-                    <li className="liensNav">
-                        <Link className="lien" to="/">
+                    <li className="liensNav ">
+                        <Link className="lien purpleHover" to="/">
                             Top Games
                         </Link>
                     </li>
-                    <li className="liensNav">
-                        <Link className="lien" to="/top-streams">
+                    <li className="liensNav ">
+                        <Link className="lien purpleHover" to="/top-streams">
                             Top Streams
                         </Link>
                     </li>

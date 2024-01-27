@@ -134,6 +134,71 @@ SIDEBAR
   padding: 0 0 0 10px;
 }
 
+.containerFlexSidebar {
+  padding: 10px 15px 8px 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+.containerFlexSidebar:hover {
+  background-color: #27272c;
+}
+
+.profilePicRonde {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 3px;
+  
+}
+
+.streamUser {
+  flex-basis: 50%;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebarStreamData {
+  max-width: 100px;
+}
+
+.gameNameSidebar {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  margin-top: 1px;
+  color: gray;
+  font-size: 13px;
+  width: 120px;
+  padding-bottom: 1px;
+}
+
+.viewerRight {
+  font-size: 12px;
+  flex-basis: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.redPoint {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 3px;
+  background-color: crimson;
+}
+
 @media screen and (max-width: 1200px) {
   .sidebar {
     display: none;

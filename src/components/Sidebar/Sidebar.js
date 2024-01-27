@@ -58,6 +58,8 @@ const Sidebar = () => {
                 stream.gameName = "";
                 stream.truePic = "";
                 stream.login = "";
+                stream.view = "";
+                let strViewer_count = null;
 
                 gamesNamesArray.forEach(name => {
                     getUsersArray.forEach(user => {
@@ -66,6 +68,20 @@ const Sidebar = () => {
                             stream.gameName = name.name;
                             stream.truePic = user.profile_image_url;
                             stream.login = user.login;
+                        }
+
+                        if(stream.viewer_count > 999 && stream.viewer_count < 10000){
+                            strViewer_count = stream.viewer_count.toString();
+                            stream.view = strViewer_count.substr(0,1) + "," + strViewer_count.substr(1,1) + " k";
+                        } else if(stream.viewer_count > 9999 && stream.viewer_count < 100000){
+                            strViewer_count = stream.viewer_count.toString();
+                            stream.view = strViewer_count.substr(0,2)  + "," + strViewer_count.substr(2,1) + " k";
+                        } else if(stream.viewer_count > 99999 && stream.viewer_count < 1000000){
+                            strViewer_count = stream.viewer_count.toString();
+                            stream.view = strViewer_count.substr(0,3)  + "," + strViewer_count.substr(3,1) + " k";
+                        } else if(stream.viewer_count > 999999){
+                            strViewer_count = stream.viewer_count.toString();
+                            stream.view = strViewer_count.substr(0,1)  + "," + strViewer_count.substr(1,1) + " m";
                         }
                     })
                 })
@@ -90,12 +106,14 @@ const Sidebar = () => {
                 {topStreams.map((stream, index) => (
                     <li className="containerFlexSidebar" key={index}>
                         <img src={stream.truePic} alt="logo user" className="profilePicRonde" />
-                        <div className="streamUser">{stream.user_name}</div>
+                        <div className="sidebarStreamData">
+                            <div className="streamUser">{stream.user_name}</div>
+                            <div className="gameNameSidebar">{stream.gameName}</div>
+                        </div>
                         <div className="viewerRight">
                             <div className="redPoint"></div>
-                            <div>{stream.viewer_count}</div>
+                            <div>{stream.view}</div>
                         </div>
-                        <div className="gameNameSidebar">{stream.gameName}</div>
                     </li>
                 ))}
             </ul>

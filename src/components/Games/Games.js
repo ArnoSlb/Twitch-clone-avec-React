@@ -9,7 +9,7 @@ const Games = () => {
 
         const fetchData = async () => {
             const result = await api.get('https://api.twitch.tv/helix/games/top')
-            console.log(result);
+            // console.log(result);
 
             let dataArray = result.data.data;
             let finalArray = dataArray.map((game) => {

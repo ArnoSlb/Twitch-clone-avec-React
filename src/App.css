@@ -47,6 +47,18 @@ HEADER
   transform: translate( -50%, 0);
 }
 
+.lien {
+  color: whitesmoke;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lien:hover {
+  color: #9147ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .logo{
   margin-top: 5px;
   height: 35px;

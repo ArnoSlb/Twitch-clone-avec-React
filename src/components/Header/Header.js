@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/icons8-twitch.svg";
 import search from "../../assets/icons8-search.svg";
 import menuIco from "../../assets/icons8-menu.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -10,13 +11,19 @@ const Header = () => {
             <nav className="headerTop">
                 <ul className="listMenu">
                     <li className="liensNav">
-                        <img src={logo} alt="logo twitch" className="logo" />
+                        <Link className="lien" to="/">
+                            <img src={logo} alt="logo twitch" className="logo" />
+                        </Link>
                     </li>
                     <li className="liensNav">
-                        Top Games
+                        <Link className="lien" to="/">
+                            Top Games
+                        </Link>
                     </li>
                     <li className="liensNav">
-                        Top Streams
+                        <Link className="lien" to="/top-streams">
+                            Top Streams
+                        </Link>
                     </li>
                     <li className="liensNav">
                         <form action="" className="formSubmit">

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams, Link } from "react-router-dom";
 import api from "../../api";
 
 const GamesStreams = () => {
 
+    let {slug} = useParams();
     let location = useLocation();
 
     const [streamData, setStreamData] = useState([]);
@@ -67,8 +68,30 @@ const GamesStreams = () => {
 
     return (
         <div>
-            <br /><br /><br /><br />
-            <h1>Je suis Games Streams</h1>
+            <h1 className="titleGamesStreams">Streams : {slug}</h1>
+            <h3 className="subtitlesGamesStreams">
+                <strong className="textColored">{viewers}</strong> personnes regardent {slug}
+            </h3>
+            <div className="flexAccueil">
+                {streamData.map((stream, index) => (
+                    <div key={index} className="cardGameStreams">
+                        <Link 
+                            className="lien"
+                            to={{
+                                pathname: `/live/${stream.login}`
+                            }}
+                        >
+                            <img src={stream.thumbnail_url} alt="jeu carte img" className="imgCard" />
+                            <div className="cardBodyGameStreams">
+                                <h5 className="titleCardStream">{stream.user_name}</h5>
+                                <p className="txtStream">Nombre de viewers : {stream.viewer_count}</p>
+                            </div>
+                            <div className="btnCard">Regarder {stream.user_name}</div>
+                        </Link>
+           
+                    </div>
+                ))}
+            </div>
         </div>
        
     )

@@ -8,6 +8,7 @@ const Live = () => {
     let {slug} = useParams();
 
     const [infoStream, setInfoStream] = useState([]);
+    const [userImg, setUserImg] = useState('')
 
     useEffect(() => {
 
@@ -17,13 +18,16 @@ const Live = () => {
 
             let dataArray = result.data.data[0];
 
-            const resultUser = await api.get(`https://api.twitch.tv/helix/streams?login=${slug}`);
+            let userID = result.data.data.map(userid => {
+                return userid.user_id;
+            })
 
-            const dataUserArray = resultUser.data.data;
+            const resultUser = await api.get(`https://api.twitch.tv/helix/users?id=${userID}`);
 
-            const finalUserArray = dataUserArray.filter(user => user.user_login === slug)
+            let dataUser = resultUser.data.data[0];
+            let profile_pic = dataUser.profile_image_url;
 
-            console.log(finalUserArray);
+            setUserImg(profile_pic);
 
             setInfoStream(dataArray);
         }
@@ -37,8 +41,8 @@ const Live = () => {
             <ReactTwitchEmbedVideo height="754" width="100%" channel={slug} />
             <div className="contInfo">
                 <div className="containerImgLive">
-                    {/* <img src="" alt="image du profile" /> */}
-                    <p className="live">Live</p>
+                    <img className="liveUserImg" src={userImg} alt="image du profile" />
+                    <p className="imgLive">Live</p>
                 </div>
                 <div className="containerStreamLiveData">
                     <h5 className="streamLiveUser">{infoStream.user_name}</h5>

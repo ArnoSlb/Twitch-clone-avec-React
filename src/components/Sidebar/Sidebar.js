@@ -105,8 +105,8 @@ const Sidebar = () => {
             <h2 className="titleSidebar">Chaînes recommandées</h2>
             <ul className="listStream">
                 {topStreams.map((stream, index) => (
-                    <Link className="lien" to={{pathname: `/live/${stream.user_login}`}}>
-                        <li className="containerFlexSidebar" key={index}>
+                    <Link className="lien" to={{pathname: `/live/${stream.user_login}`}} key={index}>
+                        <li className="containerFlexSidebar">
                             <img src={stream.truePic} alt="logo user" className="profilePicRonde" />
                             <div className="sidebarStreamData">
                                 <div className="streamUser">{stream.user_name}</div>

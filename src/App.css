@@ -434,8 +434,13 @@ LIVE STREAM
 ///////// 
 */
 
+.containerDecale {
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-left: 239px;
+}
+
 .contInfo{
-  margin-left: 239px;
   padding-top: 10px;
 }
 

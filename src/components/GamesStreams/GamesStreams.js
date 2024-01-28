@@ -9,6 +9,7 @@ const GamesStreams = () => {
 
     const [streamData, setStreamData] = useState([]);
     const [viewers, setViewers] = useState(0);
+    const [userImg, setUserImg] = useState('')
 
     useEffect(() => {
 
@@ -63,6 +64,7 @@ const GamesStreams = () => {
         };
 
         fetchData();
+        console.log(streamData)
 
     }, [])
 
@@ -74,19 +76,24 @@ const GamesStreams = () => {
             </h3>
             <div className="flexAccueil">
                 {streamData.map((stream, index) => (
-                    <div key={index} className="cardGameStreams">
+                    <div key={index} className="cardStream">
                         <Link 
                             className="lien"
                             to={{
                                 pathname: `/live/${stream.login}`
                             }}
                         >
-                            <img src={stream.thumbnail_url} alt="jeu carte img" className="imgCard" />
-                            <div className="cardBodyGameStreams">
-                                <h5 className="titleCardStream">{stream.user_name}</h5>
-                                <p className="txtStream">Nombre de viewers : {stream.viewer_count}</p>
+                            <img src={stream.thumbnail_url} className="imgStreamCard" alt="jeu" />
+                            <p className="live">live</p>
+                            <p className="liveViewers">{stream.viewer_count} spectateurs</p>
+                            <div className="cardBodyStream">
+                                {/* <img src={stream.truePic} alt="logo user" className="profilePicRonde" /> */}
+                                <div className="carBodyStreamData">
+                                    <h5 className="titleCardsStream">{stream.title}</h5>
+                                    <p className="gameNameSidebar">{stream.user_login}</p>
+                                    <div className="gameNameSidebar">{stream.game_name}</div>
+                                </div>
                             </div>
-                            <div className="btnCard">Regarder {stream.user_name}</div>
                         </Link>
            
                     </div>

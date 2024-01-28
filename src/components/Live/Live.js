@@ -22,6 +22,8 @@ const Live = () => {
                 return userid.user_id;
             })
 
+            console.log(dataArray, userID);
+
             const resultUser = await api.get(`https://api.twitch.tv/helix/users?id=${userID}`);
 
             let dataUser = resultUser.data.data[0];

@@ -487,3 +487,47 @@ LIVE STREAM
   color: rgb(253, 107, 107);
 }
 
+/* 
+/////////
+GAME STREAM
+///////// 
+*/
+
+.titleGamesStreams {
+  padding-top: 100px;
+  font-size: 35px;
+  font-weight: bold;
+  padding-left: 239px;
+  padding-bottom: 10px;
+}
+
+.subtitlesGamesStreams {
+  font-size: 17px;
+  font-weight: 300px;
+  padding-left: 239px;
+  padding-bottom: 10px;
+}
+
+.textColored {
+  color: #9146ff;
+}
+
+.cardGameStreams {
+  height: 280px;
+  width: 310px;
+  margin: 0 10px 20px 10px;
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  background-color: red;
+}
+
+.cardBodyGamesStreams {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

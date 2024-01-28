@@ -428,3 +428,36 @@ TOP STREAMS
   padding-top: 2px;
 }
 
+/* 
+/////////
+LIVE STREAM
+///////// 
+*/
+
+.contInfo{
+  margin-left: 239px;
+  padding-top: 10px;
+}
+
+.containerImgLive {
+  position: relative;
+  width: 50px;
+}
+
+.containerStreamLiveData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 100px;
+  line-height: 1.7;
+}
+
+.streamLiveUser {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.streamLiveViewer {
+  color: rgb(253, 107, 107);
+}

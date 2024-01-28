@@ -96,7 +96,7 @@ const TopStreams = () => {
 
             })
 
-            console.log(finalArray)
+            // console.log(finalArray)
             setChannels(finalArray);
         }
 
@@ -121,7 +121,7 @@ const TopStreams = () => {
                                 <img src={channel.truePic} alt="logo user" className="profilePicRonde" />
                                 <div className="carBodyStreamData">
                                     <h5 className="titleCardsStream">{channel.title}</h5>
-                                    <p className="gameNameSidebar">{channel.user_name}</p>
+                                    <p className="gameNameSidebar">{channel.user_login}</p>
                                     <div className="gameNameSidebar">{channel.gameName}</div>
                                 </div>
                             </div>

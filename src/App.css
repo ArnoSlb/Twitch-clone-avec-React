@@ -120,8 +120,43 @@ HEADER
     position: relative;
     left: auto;
     transform: none;
+    width: 100% !important;
+    padding: 10px 0 20px 0;
+  }
+  .listMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background: #9146ff;
+    width: 100%;
+  }
+  .logo{
+    margin-top: 0;
+  }
+  .liensNav {
+    color: whitesmoke;
+  }
+  .formSubmit {
+    justify-content:  center;
+  }
+  .menuResBtn {
+    display: block!important;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .purpleHover:hover{
+    color: whitesmoke;
+  }
+
+  .headerTop {
+    background-color: #9146ff;
   }
 }
+
+
+
 
 /* 
 /////////

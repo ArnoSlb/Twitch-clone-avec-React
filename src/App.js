@@ -6,6 +6,7 @@ import Games from './components/Games/Games';
 import TopStreams from './components/TopStreams/TopStreams';
 import Live from './components/Live/Live';
 import GamesStreams from './components/GamesStreams/GamesStreams';
+import Result from './components/Result/Result';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/top-streams' Component={TopStreams}/>
           <Route exact path='/live/:slug' Component={Live}/>
           <Route exact path='/game/:slug' Component={GamesStreams}/>
+          <Route exact path='/result/:slug' Component={Result}/>
         </Routes>
       </div>
     </Router>

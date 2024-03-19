@@ -566,3 +566,16 @@ GAME STREAM
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+
+/* 
+/////////
+  SEARCH RESULT
+///////// 
+*/
+
+.containerResult{
+  background-color: #9146ff;
+  color: white;
+  padding: 100px;
+}

@@ -27,7 +27,6 @@ const Result = () => {
     return(
         <div>
             <div className="containerResult">
-                <h4>Résultats de recherche :</h4>
                 {streamerInfo.map((stream, index) => (
 
                     <div key={index} className="cardResult">
@@ -52,7 +51,6 @@ const Result = () => {
                     </div>
 
                 ))}
-
             </div>
         </div>
     )

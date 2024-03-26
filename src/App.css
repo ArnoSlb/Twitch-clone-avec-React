@@ -577,5 +577,42 @@ GAME STREAM
 .containerResult{
   background-color: #9146ff;
   color: white;
-  padding: 100px;
+  padding: 10px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  border-radius: 10px;
+}
+
+.cardResult .imgCard {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.cardBodyResult{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleCardStreamer {
+  font-weight: Bold;
+  padding: 0 10px 10px;
+  font-size: 25px;
+}
+
+.txtResult {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.btnResult {
+  margin-top: 15px;
+  padding: 10px;
+  background: #25252a;
 }

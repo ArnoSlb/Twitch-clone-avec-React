@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../../api";
 import { Link, useParams } from "react-router-dom";
+import Error from "../Error/Error";
 
 const Result = () => {
 
@@ -18,13 +19,20 @@ const Result = () => {
             const result = await api.get(`https://api.twitch.tv/helix/users?login=${cleanSearch}`)
             console.log(result.data.data);
 
-            setStreamerInfo(result.data.data)
+            if(result.data.data.length === 0){
+                setResult(false);
+            } else {
+                setStreamerInfo(result.data.data)
+            }
+            
 
         }
         fetchData();
-    }, []) 
+    }, [slug]) 
 
     return(
+
+        result ? 
         <div>
             <div className="containerResult">
                 {streamerInfo.map((stream, index) => (
@@ -53,6 +61,8 @@ const Result = () => {
                 ))}
             </div>
         </div>
+        :
+        <Error/>
     )
 }
 

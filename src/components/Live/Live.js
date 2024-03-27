@@ -16,6 +16,12 @@ const Live = () => {
 
             const result = await api.get(`https://api.twitch.tv/helix/streams?user_login=${slug}`);
 
+            if (result.data.data.length === 0){
+
+                setInfoStream({title: "Le Streamer est offligne !"})
+
+            } else {
+
             let dataArray = result.data.data[0];
 
             let userID = result.data.data.map(userid => {
@@ -32,6 +38,8 @@ const Live = () => {
             setUserImg(profile_pic);
 
             setInfoStream(dataArray);
+
+            }
         }
 
         fetchData();
@@ -39,6 +47,17 @@ const Live = () => {
     },[slug])
 
     return(
+        infoStream.title === "Le Streamer est offligne !" ?
+
+        <div className="containerDecale">
+            <ReactTwitchEmbedVideo height="754" width="100%" channel={slug} />
+            <div className="contInfo">
+                <div className="containerStreamLiveData">
+                    <p className="streamLiveTitle">{infoStream.title}</p>
+                </div>
+            </div>
+        </div>
+        :
         <div className="containerDecale">
             <ReactTwitchEmbedVideo height="754" width="100%" channel={slug} />
             <div className="contInfo">

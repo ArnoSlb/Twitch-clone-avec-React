@@ -17,7 +17,7 @@ const Result = () => {
         const fetchData = async() => {
 
             const result = await api.get(`https://api.twitch.tv/helix/users?login=${cleanSearch}`)
-            console.log(result.data.data);
+            // console.log(result.data.data);
 
             if(result.data.data.length === 0){
                 setResult(false);

@@ -64,7 +64,7 @@ const GamesStreams = () => {
         };
 
         fetchData();
-        console.log(streamData)
+        // console.log(streamData)
 
     }, [])
 

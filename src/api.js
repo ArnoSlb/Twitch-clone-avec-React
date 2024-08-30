@@ -3,7 +3,7 @@ import axios from "axios";
 let api = axios.create({
     headers: {
         "Client-ID": "ukj6mwo1dyrrbxv5tkmfcwx0eceogj",
-        "Authorization": "Bearer yk8yd1nafcm349yryucu8hvbkv1woo"
+        "Authorization": "Bearer p8zyo1lv2icyn69jdj1rx8s6469nbp"
     }
 });
 
